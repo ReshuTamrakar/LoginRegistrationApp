@@ -1,0 +1,21 @@
+﻿
+@model LoginRegistrationApp.Models.Registration
+@{
+    ViewBag.Title = "Reg";
+}
+@using (Html.BeginForm("SaveReg", "Registration"))
+{
+    @Html.Label("User Id:")
+    @Html.TextBox("RegId")
+
+    @Html.Label("Name:")
+    @Html.TextBox("Name")
+
+    @Html.Label("UserName:")
+    @Html.TextBox("UserName")
+
+    @Html.Label("Password:")
+    @Html.TextBox("Password")
+
+    <input type="submit" value="Save" />
+}
