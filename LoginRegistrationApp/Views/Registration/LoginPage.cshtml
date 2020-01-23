@@ -9,10 +9,21 @@
 
 @using (Html.BeginForm("Log", "Registration"))
 {
-    @Html.Label("UserName:")
-    @Html.TextBox("UserName")
-    @Html.Label("Password:")
-    @Html.TextBox("Password")
-    <input type="submit" value="Login" />
+
+    <table>
+        <tbody>
+            <tr>
+                <td>   @Html.Label("UserName:")</td>
+                <td>@Html.TextBox("UserName")</td>
+            </tr>
+            <tr>
+                <td> @Html.Label("Password:")</td>
+                <td>  @Html.TextBox("Password")</td>
+            </tr>
+            <tr>
+                <td>  <input type="submit" value="Login" /></td>
+            </tr>
+        </tbody>
+    </table>
 }
 

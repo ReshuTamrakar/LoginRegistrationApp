@@ -3,19 +3,31 @@
 @{
     ViewBag.Title = "Reg";
 }
+<h2>Registration</h2>
 @using (Html.BeginForm("SaveReg", "Registration"))
 {
-    @Html.Label("User Id:")
-    @Html.TextBox("RegId")
-
-    @Html.Label("Name:")
-    @Html.TextBox("Name")
-
-    @Html.Label("UserName:")
-    @Html.TextBox("UserName")
-
-    @Html.Label("Password:")
-    @Html.TextBox("Password")
-
-    <input type="submit" value="Save" />
+ 
+    <table>
+        <tbody>
+            <tr>
+                <td>   @Html.Label("User Id:")</td>
+                <td>   @Html.TextBox("RegId")</td>
+            </tr>
+            <tr>
+                <td> @Html.Label("Name:")</td>
+                <td> @Html.TextBox("Name")</td>
+            </tr>
+            <tr>
+                <td>  @Html.Label("UserName:")</td>
+                <td> @Html.TextBox("UserName")</td>
+            </tr>
+            <tr>
+                <td> @Html.Label("Password:")</td>
+                <td>@Html.TextBox("Password")</td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Save" /></td>
+            </tr>
+        </tbody>
+    </table>
 }
