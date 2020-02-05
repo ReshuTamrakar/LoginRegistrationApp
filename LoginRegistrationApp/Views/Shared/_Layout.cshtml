@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body onLoad="disableClick()">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -38,5 +38,29 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+
+
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) { // Prevent F12
+                return false;
+            } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+                return false;
+            }
+        });
+
+        $(document).on("contextmenu", function (e) {
+            e.preventDefault();
+        });
+        //function disableClick() {
+        //    document.onmousedown = function (event) {
+        //        if (event.button == 2) {
+        //            alert('Right Click Message');
+        //            return false;
+        //        }
+        //    }
+        //}
+    </script>
+   
 </body>
 </html>
